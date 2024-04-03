@@ -141,7 +141,7 @@ Continuously, available Wi-Fi network will be found, if scanning is in process.
 ---
 ## QR-Code
 
-###Raw-Data
+### Raw-Data
 A QR-Code scanner returns the encapsulated result of decoding a barcode into an image.
 the raw data contains:
 
