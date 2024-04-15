@@ -1,10 +1,10 @@
-# App Loggings
+# App Content Loggings
 
-Apps are logging data using the json notation.
+Apps log data using the Json notation. The following table describes the logged data with examples on how the data is saved. In addition data is annotated on when they are logged. 
 
-## Apps - Logged Data
+## Logged Data
 
-| Apps   |      Data      |  Example |
+| App/Module   |      Data      |  Example |
 |----------|---------------| -------------|
 | ABC | <ul><li>Selected game mode (robot uses spelling board) <sup>(1)</sup></li><li>Drafted letter from A-Z <sup>(1)</sup></li></ul> | ``` "useLetterSpellingBoard":false, ``` <br> ``` "letter":"G" ``` |
 | Communication | <ul><li>Count of characters; -1 on error <sup>(1)</sup></li></ul> | ``` "data": "613" ``` |
