@@ -32,6 +32,50 @@
 
 ## Creating a new App
 
+### Simple App
+
+#### Get started
+1. Create a new project: <br> `File` &rarr; `New` &rarr; `New Project...` &rarr; `Phone & Tablet` &rarr; `Empty Activity`
+2. Click `Next` to name your application and set the package name according to the correct app category: <br> `de.fhkiel.srcms.apps.[category].p.APPNAME`
+
+> **_NOTE:_**  If programming for Pepper: Select minimum SDK &rarr; `API 23: Android 6.0 (Marshmallow)`.
+
+3. Click `Finish`.
+
+#### Dependencies & Plugins
+Add following dependencies to your project's `build.gradle`:
+```
+dependencies {
+    classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.7.7"
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.10"
+}
+```
+
+Add following dependencies and plugins to your application's `build.gradle`:
+```
+dependencies {
+    implementation 'de.fhkiel.srcms.lib:srcmslib:0.1.8'
+    
+    implementation 'com.aldebaran:qisdk:1.7.5'
+    implementation 'com.aldebaran:qisdk-design:1.7.5'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
+    ...
+}
+```
+
+```
+
+plugins {
+    id 'androidx.navigation.safeargs.kotlin'
+    ...
+}
+
+```
+
+> **_NOTE:_**  Make sure to use Android Gradle Plugin Version `8.0.2` or higher, and Gradle Version `8.1` or higher
+
+
+
 ### Using Content Player Module
 
 The new application provides the content player module with the necessary information to function as a media player. All functionalities are within the content player module.
@@ -244,4 +288,7 @@ viewModel.contentControllerAnswer = ContentControllerAnswer(this, getRobot())
 
 ### Additional Information
 Package names for app categories:
-de.fhkiel.srcms.
+
+| Name   |      Package name      |  Color Scheme |
+|----------|---------------| -------------|
+| Fun | de.fhkiel.srcms.apps.fun.p.APPNAME| Green |
