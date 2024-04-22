@@ -42,6 +42,9 @@
 
 3. Click `Finish`.
 
+> **_NOTE:_**  Make sure to extend your MainActivity from `SRCMSActivity()`
+
+
 #### Dependencies & Plugins
 Add following dependencies to your project's `build.gradle`:
 ```
@@ -73,7 +76,6 @@ plugins {
 ```
 
 > **_NOTE:_**  Make sure to use Android Gradle Plugin Version `8.0.2` or higher, and Gradle Version `8.1` or higher
-
 
 
 ### Using Content Player Module
@@ -131,7 +133,7 @@ plugins {
         app:navGraph="@navigation/nav_graph_content_player" />
 ```
 
-2. In your MainActivity programming file, inherit from `SRCMSActivity()` and implement the necessary member functions.
+2. In your MainActivity programming file, extend from `SRCMSActivity()` and implement the necessary member functions.
 3. Declare and define following variables for the navigation components and information transfer:
 ```
 private lateinit var navController: NavController
@@ -228,7 +230,7 @@ plugins {
         app:navGraph="@navigation/nav_graph_content_player_quiz" />
 ```
 
-2. In your MainActivity programming file, inherit from `SRCMSActivity()` and implement the necessary member functions.
+2. In your MainActivity programming file, extend from `SRCMSActivity()` and implement the necessary member functions.
 3. Declare and define following variables for the navigation components and information transfer:
 ```
 private lateinit var navController: NavController
@@ -285,6 +287,47 @@ viewModel.contentControllerAnswer = ContentControllerAnswer(this, getRobot())
 ```
 5. Run your application.
 
+
+## VCS
+### Add Git version control
+
+Now you project is ready for setting up Git and the first initial commit.
+
+1. In Android Studio enable version control integration:
+ `VCS` &rarr; `Enable Version Control Integration` &rarr; Select `Git`
+2. Do your initial commit. You have three option to to it:<br>
+    2.1. via menu: **Git > Commit** <br>
+    2.2. via toolbar-icon: **Green Check Icon (Commit)** <br>
+    2.3. via left sidebar: **Commit**
+
+3. Check all unversioned files and add **Initial Commit** as commit message.
+4. Commit the changes.
+_If there are open ToDos, ignore them and **Commit Anyway**_
+
+### Setup online repository
+
+It is time to bring your project online and setup your Git repository.
+
+1. Goto your projects Bitbucket repository and copy the clone URL.
+2. In Android Studio, add it as remote URL for your project:
+ `Git` &rarr; `Manage Remotes` &rarr; `Add`
+3. Push you project changes. You have two options: <br>
+    3.1. via menu: **Git > Push** <br>
+    3.2. via toolbar-icon: **Green Arrow (Push)**
+
+### Creating a development branch
+Now we continue with repository setup and the dev branch:
+
+1. In Android Studio open the branches view. You have two options: <br>
+    1.1. via menu: **Git > Branches** <br>
+    1.2. via bottom toolbar: click on **master** branch on very right of bottom toolbar of the window
+2. Select `+ New Branch`
+3. Enter new branch name **dev**
+4. Make sure `Checkout branch` option is checked
+
+You should be on the dev branch now (see branch name on very right bottom toolbar of the window).
+
+Push the changes again to online repository (see above) and you are done with setting up your project and repository.
 
 ## Additional Information
 
@@ -353,3 +396,58 @@ The FH Kiel uses by default the following category hierachy:
 | Sozio | de.fhkiel.srcms.apps.sozio.p.APPNAME| Sozio interaction, Infotainment apps | Analogous Blue |
 | Fun | de.fhkiel.srcms.apps.fun.p.APPNAME| For fun applications | Analogous Green |
 | Communication | de.fhkiel.srcms.apps.communication.p.APPNAME| Communication / Tele-presence / video call apps | Analogous Blue |
+
+
+### Creating a Revision Task
+To create a release, open Jira and open the Kanban board, that belongs to your project.
+Follow these steps to create a release for your project.
+
+1. Use the **Create** button (on Jira top navigation bar) to create a new task
+2. Select: <br>
+    **Issue Type**: Task <br>
+    **Summary**: Your apps name and the revision number (e.g.: _Test App rev. 1_)<br>
+    **Component**: Select your apps component (e.g.: _Test App_)<br>
+    **Description**: If needed add one<br>
+    **Fix Version/s**: Select a version where you want to publish your task / revision. It maybe is not specifiednow, so leave it blank.<br>
+    **Priority**: Set an appropiate priority for the desire task<br>
+    **Assignee**: Select the one, that should work on this task<br>
+
+#### Schedule Task in Backlog
+
+Now your task is in the board Backlog. We need to schedule it to be visible on the board and put it into development.
+
+1. Goto the boards **Backlog** (on left toolbar)
+2. **Drag** the revision task to **Scheduled** to plan it for development.
+3. Go back to **Kanban board** (on left toolbar)
+
+#### Start developing
+In Kanban board, the task for revision one of yur app should now be visible in **Scheduled** column.
+Now we put it into development and create a revision branch for further work.
+
+1. **Drag** the revision task to column **In Development (Develop)**
+2. **Click** on the revision task to open the task details view on the right side.
+3. **Scroll down** to **Development** and click on **Create new branch**.<br>
+Open it in a new tab, while it will open _Bitbucket_.
+4. As **Repsitory** select your apps repository <br>
+As **Branchtype** select Release <br>
+As **Origin** select **dev**<br>
+and create new branch.
+
+You are done now and created your first revision task.
+You can continue with working on features of your projects first revision.
+
+### Working on features
+Now you can start working on features of an revision.
+To develop features, a revision has to be in development and a revision branch has to be created, before you can start with working on features.
+Here are some smple rules to follow during working on a task. Here are only the basics explained.
+
+1. For a new feature, **Create** a new **Task** in **Jira**
+2. Set the task as **child of revision task**
+3. Drag the task from **Backlog** to **Scheduled**, to start working on it
+4. Create **new Branch** from **revision branch** for every task.<br>
+If you **start working** on a task, always **merge** the **revision branch** into the **task branch** to sync to your latest revision work.
+5. If you think you are done, do a Technical Test<br>
+    5.1. **Drag** the feature task to the **Technical Test** column<br>
+      *  5.1.1. If if succeeds: **drag** it to the **Done** column <br>
+      *  5.1.2. If it fails: **drag** to back to **In Development (Fix)**
+6. If a task is **complete** (column Done), **merge** the **task branch** into the **revision branch**
