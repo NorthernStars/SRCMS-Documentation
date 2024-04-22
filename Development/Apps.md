@@ -289,6 +289,13 @@ viewModel.contentControllerAnswer = ContentControllerAnswer(this, getRobot())
 ### Additional Information
 Package names for app categories:
 
-| Name   |      Package name      |  Color Scheme |
-|----------|---------------| -------------|
-| Fun | de.fhkiel.srcms.apps.fun.p.APPNAME| Green |
+| Name   |      Package name      | Description | Color Scheme |
+|-----------|---------------| --------------- | -------------|
+| Demo | de.fhkiel.srcms.apps.fun.p.APPNAME| Demonstration apps, for development only. | Default (Blue) |
+| Therapy (Category) | de.fhkiel.srcms.apps.therapy.*| For different kind of therapy applications | Triadic Colors |
+| Therapy Physical | de.fhkiel.srcms.apps.therapy.physical.p.APPNAME| For physical applications | Triadic Colors |
+| Therapy Cognitive | de.fhkiel.srcms.apps.therapy.cognitive.p.APPNAME| For quizzes and cognative applications | Triadic Colors |
+| Therapy Psyc | de.fhkiel.srcms.apps.therapy.psyc.p.APPNAME| Mindfullness apps | Triadic Colors |
+| Sozio | de.fhkiel.srcms.apps.sozio.p.APPNAME| Sozio interaction, Infotainment apps | Analogous Blue |
+| Fun | de.fhkiel.srcms.apps.fun.p.APPNAME| For fun applications | Analogous Green |
+| Communication | de.fhkiel.srcms.apps.communication.p.APPNAME| Communication / Tele-presence / video call apps | Analogous Blue |
