@@ -286,8 +286,62 @@ viewModel.contentControllerAnswer = ContentControllerAnswer(this, getRobot())
 5. Run your application.
 
 
-### Additional Information
-Package names for app categories:
+## Additional Information
+
+### Packaging
+
+The srcms lists the available apps using their package names.
+Their package name must be one of the base package names, followed by a hierachy of categories and the apps private packages.
+
+Package names are case insensitive.
+
+They are explained in the following:
+
+#### Base-Packages
+
+Base packages are to build apps of different institutions or companies. The are the first packages any app, that should be shown in scrms, must use
+as its own package name.
+
+There can be multiple base package names allowed in an instance of the srcms. For the FH Kiel the default base package is:
+`de.fhkiel.srcms.apps`
+
+#### Apps category hierachy
+
+The hierachy, the apps are displayed in, is build using their packages. Therefor each package, following the base package (see above), is a category
+displayed in the srcms.
+The categories are divided, like the packages, by a dot.
+
+The name of a category defined by a package, can be translated by the srcms into any other human-radable name. Therefore the package names are
+only for internal structual hierachy.
+
+**Example**
+
+An app with the the category hierachy
+
+_Therapy Physical Dance_
+
+must be using the following package (with default base package of FH Kiel):
+`de.fhkiel.srcms.apps.therapy.physical.dance`
+
+Attention: This must still be followed by a private package. See next section
+
+#### Private packages
+
+Each Android application must implement a custom package. So each app, besides the base package and the category hioerachy (see above), must
+use a custom package. This custom (privat) package and all packages beklow, should not be displayd as category inside the srcms.
+
+Therefore the privat package must be inside a package called _p_.
+
+Everything inside this package is private and not visible to the user.
+
+**Example**
+
+Using the example above, extended by a private package for this particular app, it can look like this:
+`de.fhkiel.srcms.apps.therapy.physical.p.workout`
+
+### FH Kiel Catgories
+The FH Kiel uses by default the following category hierachy:
+
 
 | Name   |      Package name      | Description | Color Scheme |
 |-----------|---------------| --------------- | -------------|
