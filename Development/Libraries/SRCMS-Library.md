@@ -52,7 +52,7 @@ generated JavaDoc for further information.
 |-----------|---------------|
 |SRCMSActivity | A basic RobotActivity class to extend to use for an robot application. Hdandles the basic usage of the robots functions. |
 |SRCMSAppCategroy | A category representing an apps category inside the SRCMS world. |
-|SRCMSAppInfo An | class to store information about an app for the SRCMS at a online repository. |
+|SRCMSAppInfo | An class to store information about an app for the SRCMS at a online repository. |
 |SRCMSAppIntent | Class to handle the information, the SRCMS uses as extras data in an Androids intent when calling an SRCMS app. |
 |SRCMSDownloadHelper | Class with static function to download files. |
 |SRCMSFragment | A Fragment class used to extend. Includes some basic functions to show Toast massages and navigate to another fragment using Actions. |
