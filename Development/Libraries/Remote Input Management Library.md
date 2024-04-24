@@ -2,9 +2,19 @@
 
 The RIM Library includes an Android Service that runs on the robot to allow remote conrol over the device.
 
+Following functionalities are offered:
+
+1. Navigation
+2. Interaction
+3. App Management
+4. Device Monitoring
+
+> **_NOTE:_** Use the Remote Control App for easy remote control or for custom commands the Transfer Library!
+
+
 ## Installation
 
-This requires you to use the Android Studio. For this follow these step to install the srcms-lib:
+This requires you to use the Android Studio. For this follow these step to install the rimlibrary:
 
 1. Clone the git maven repository from https://bitbucket.iue.fh-kiel.de/projects/SRC/repos/srcms-lib-maven/ to your local maven repository
 location:
@@ -25,10 +35,11 @@ pluginManagement {
 }
 ```
 
-3. Include the rim-lib into your project to be able to use it inside your apps build.gradle:
+3. Include the rimlibrary into your project to be able to use it inside your apps build.gradle:
 ```
 dependencies {
-    implementation 'de.fhkiel.srcms.remote:rimlibrary:x.x.x'}
+    implementation 'de.fhkiel.srcms.remote:rimlibrary:x.x.x'
+}
 ```
 Replace the x.x.x with the latest version of the RIM Library inside your Maven Repository.
 
@@ -44,7 +55,6 @@ Main service to subscribe to an server to receive data from an input. Service ha
 #### _Functions_
 
 **shutDown**
-
 
 `shutDown()`
 
