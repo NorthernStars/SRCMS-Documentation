@@ -504,3 +504,4 @@ Builds a baseline `JSONObject` for Pepper. Baseline includes status information 
 | Descriptor |  `RECEIVER("Receiver")` <br> `EMITTER("Emitter")`| Enum of descriptors |
 | MovementType | `LINE("Line")`<br> `ROTATION("Rotation")`<br> `DIAGONAL("Diagonal")`<br> `STOP("Stop")` | Enum of different motion types for the robot |
 | Type | `CONTROLSTICK("ControlStick"`)<br> `INTERACTION("Interaction")`<br> `AUDIO("Audio")`<br> `BASELINE("Baseline")`<br> `SEND_ANIMATION("SendAnimation")`<br>`BUILD_ANIMATION("BuildAnimation")` <br> `LAUNCH_APP("LaunchApp")` <br> `UNSPECIFIED("Unspecified")` | Enum of valid data types for the remote service |
+
