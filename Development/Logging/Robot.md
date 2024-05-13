@@ -1,5 +1,5 @@
-# Robot [DEPRECATED]
-This logging informations are deprecated and will not be used anymore!
+# Robot (DEPREACTED)
+***This logging informations are deprecated and will not be used anymore!***
 
 These services are logged regarding the robots specific data:
 
