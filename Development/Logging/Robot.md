@@ -1,4 +1,6 @@
-# Robot
+# Robot [DEPRECATED]
+This logging informations are deprecated and will not be used anymore!
+
 These services are logged regarding the robots specific data:
 
 * Power
