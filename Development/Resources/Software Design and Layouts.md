@@ -103,27 +103,27 @@ links, with them inside your _colors.xml_:
 
 #### Default Colors (SRCMS Main System & Demo)
 
-![](Resources/Default.png)
+![](Default.png)
 
 #### Analogous Mint Colors
 
-![](Resources/Analogous Mint.png)
+![](Analogous Mint.png)
 
 #### Analogous Green (Fun /  Games)
 
-![](Resources/Analogous Green.png)
+![](Analogous Green.png)
 
 #### Analogous Blue (Communication)
 
-![](Resources/Analogous Blue.png)
+![](Analogous Blue.png)
 
 #### Triadic Colors (Therapy)
 
-![](Resources/Triadic.png)
+![](Triadic.png)
 
 #### Black & White (Dementia)
 
-![](Resources/BlackAndWhite.png)
+![](BlackAndWhite.png)
 
 #### Theme
 To apply the colors above to your application your _themes.xml_ must use the following (delete any othe theme, it will not be used):
