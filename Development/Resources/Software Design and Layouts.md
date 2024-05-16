@@ -107,15 +107,15 @@ links, with them inside your _colors.xml_:
 
 #### Analogous Mint Colors
 
-![](Analogous Mint.png)
+![](Analogous-Mint.png)
 
 #### Analogous Green (Fun /  Games)
 
-![](Analogous Green.png)
+![](Analogous-Green.png)
 
 #### Analogous Blue (Communication)
 
-![](Analogous Blue.png)
+![](Analogous-Blue.png)
 
 #### Triadic Colors (Therapy)
 
