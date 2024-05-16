@@ -6,7 +6,9 @@ The Social Robot Content Management System (SRCMS) is an Android application to 
 ## Audience of this documentation
 This technical documentation is written for developers and IT stuff, that manage and develop new applications for the SRCMS. It is completly written in english for better understanding of technical structures and issues explained regarding the systems ecosystem and developing new or maintaining existing applications.
 
-The documentation is structured as Markdown text files unsing several directories with the following structure:
+
+## Table of contents
+This documentation is structured as Markdown text files unsing several directories with the following structure:
 
 - *Development*
     - *Libraries*
