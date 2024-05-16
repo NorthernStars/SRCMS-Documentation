@@ -1,7 +1,7 @@
 # Android-OS (DEPREACTED)
 ***This logging informations are deprecated and will not be used anymore!***
 
-These services are logged regarding the operating system (Android ) specific data:
+These services are logged regarding the operating system (Android) specific data:
 
 - Bluetooth
     - discovered-devices
