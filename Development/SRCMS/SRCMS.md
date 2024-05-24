@@ -1,14 +1,37 @@
 # SRCMS
-The Android app in this Content Management System (CMS) for Social Robots consists of several main components involved in starting the app. The following section provides a detailed description of the app startup process, including the classes involved, their functions, and the specific lines of code.
+The Android app of this Management System for Social Robots ((SRCMS) consists of several components involved in starting the the SRCMS, starting apps or editing settings. The following section provides a detailed description of the SRCMS software code structure, including the classes involved, their functions, and the specific lines of code.
+
+While technicaly the SRCMS is difided into several logic parts, in the users perspective is is referd to the Android app installed on a robot. At project prespective it is refered to the functional software architecture implementing the app and all its functions, as well as includes libraries. At the code (or programmers) perspective the several components are important. Therefore the SRCMS is refere to the core object of the SocialRobotCMS class.
+
+## Android Project structure
+The code is structured inside an Android Studio (IDEA IDE) projects using different project modules.
+
+- **app** The app module is the UI of the SRCMS, handling all the visual representation and visual functions of the SRCMS.
+It defines several layouts, fragment classes etc.. It's MainViewModel class is used as viewmodel and holds an object of the SocialRobotCMS class, to allow alls fragments implementing the FragmentBaserClass to access the SRCMS.
+- **srcmscore** The srcmscore module is defining the core functionalities of the SRCMS app. (Nearly) alls logical code is store here. Several classes, interfaces and enums are handling all process of the app.
+- **srcmslib**The srcmslib is defining several structures for gloabl functions of the app, as well as cortresponding structures and functions required by the apps communicating with the SRCMS. This library is used in all apps of the Social Robot CMS ecosystem.
+- **srcmstest** A test app project implementing the basic function of an app of the Social Robot CMS ecosystem.
+- **srcmsupdater** An app used to download and install / update the SRCMS app from a remote location.
+
 
 ## Main Classes
 
 - **SocialRobotCMS:** The main class that manages the CMS startup process.
-- **FragmentLoading:** This class manages the UI and performs the initialization, starting, and updating of the CMS.
+- **SocialRobotCMS.STATUS** Enum of different status values, representing the status the SRCMS  has.
+- **FragmentLoading:** This class manages the UI and performs the initialization, starting, and updating of the SRCMS.
+- **SRCMSCoreEvents** Class holding several listener interfaces for objects that register to the SocialRobotCMS class, listening for status changes.
+- **SRCMSStatusChangeListener** Global listener for listening for general status changes of the SRMCS.
+
+## Core event listeners
+The SocialRobotCMS class offers objects to register for different types of status changes, implementing the SRCMSStatusChangeListener interface. Each listener can add itself to the SRCMS object using the ```add...``` and remove itself using the ```remove..``` functions.
+
+- **InitListener** These listeners get notified about process updates during the initialisation process of the SRCMS.
+- **StartListener** Listeners get notified about changes in the SRCMS startup process.
+- **UpdateListener** Listeners get notified about changes in the SRCMS update process
 
 
 ## Startup-process of the App
-The app's startup process is meticulously structured, encompassing several critical steps, each performing specific tasks to ensure the CMS is correctly initialized, started, and updated if necessary. The SocialRobotCMS class coordinates these processes, while the FragmentLoading class manages the user interface and interaction during these processes.
+The app's startup process is strictly structured, encompassing several steps, each performing specific tasks to ensure the SRCMS is correctly initialized and started, before showing the available apps to the user. The SocialRobotCMS class coordinates these processes, while the FragmentLoading class manages the user interface and interaction during these processes.
 
 ### 1. Initializing the CMS (`actionInit` Method)
 
@@ -28,7 +51,7 @@ The `actionInit` method of the `SocialRobotCMS` class is responsible for initial
       ...
   }
   ```
-- **Description:** The `loadConfig` method is called to load the CMS configuration. If no configuration is provided, it attempts to load a saved default configuration.
+- **Description:** The `loadConfig` method is called to load the SRCMS configuration. If no configuration is provided, it attempts to load a saved default configuration.
 
 **Step 3: Verify WiFi Connection**
 - **Code:**
@@ -46,7 +69,7 @@ The `actionInit` method of the `SocialRobotCMS` class is responsible for initial
       ...
   }
   ```
-- **Description:** Loads the user database based on the configuration. This is necessary to provide user information for the CMS.
+- **Description:** Loads the user database based on the configuration. This is necessary to provide user information for the SRCMS.
 
 **Step 5: Initialize Robot**
 - **Code:**
@@ -85,7 +108,7 @@ The `actionStart` method starts the CMS after successful initialization.
       ...
   }
   ```
-- **Description:** Updates the list of installed apps on the device. This method checks the installed applications and updates the CMS database accordingly.
+- **Description:** Updates the list of installed apps on the device. This method checks the installed applications and updates the SRCMS database accordingly.
 
 ### 3. Updating the CMS (`actionUpdate` Method)
 
@@ -101,7 +124,7 @@ The `actionUpdate` method updates the CMS by initiating the update process.
       }
   }
   ```
-- **Description:** Initializes the update process if one does not already exist and starts it. The update process includes downloading and installing new versions of CMS apps and other relevant components.
+- **Description:** Initializes the update process if one does not already exist and starts it. The update process includes downloading and installing new versions of SRCMS apps.
 
 ### 4. Display and Progress Tracking (`FragmentLoading` Class)
 
