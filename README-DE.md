@@ -1,5 +1,5 @@
 # Social Robot Content Management System (SRCMS)
-Willkommen
+Willkommen,
 Das Social Robot Content Management System (SRCMS) ist eine Android-Anwendung zur Verwaltung mehrerer kleinerer Anwendungen auf dem sozialen Roboter. Es ist verantwortlich für die korrekte Anzeige der Apps in Bezug auf die Zielnutzer, die Verwaltung eines Benutzerverwaltungssystems für den Zugriff auf die Apps, das Speichern und Bearbeiten der App-Einstellungen sowie die Verwaltung der Installation und Aktualisierung der Apps über ein öffentliches Repository.
 
 ## Zielgruppe dieser Dokumentation
