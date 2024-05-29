@@ -1,6 +1,6 @@
-# Social Robot Content Management System (SRCMS) - Technical Documentation
-This is a technical documentation of the software system devloped during the ROBUST project.
-It is written in markdown files. See README.md for more information.
+Social Robot Content Management System (SRCMS) - Technische Dokumentation
+Dies ist eine technische Dokumentation des während des ROBUST-Projekts entwickelten Softwaresystems.
+Sie ist in Markdown-Dateien geschrieben. Weitere Informationen finden Sie in README.md.
 
-## Usage
-Open markdon .md files using a simple text editor or special markdown readers, if you like.
+Nutzung
+Öffnen Sie die Markdown (.md) Dateien mit einem einfachen Texteditor oder speziellen Markdown-Readern, wenn Sie möchten.
